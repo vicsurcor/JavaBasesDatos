@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
         ConexionBD conexionBD = new ConexionBD();
         conexionBD.conectar();
-        int totalRegistros = conexionBD.obtenerTotalRegistros();
-        conexionBD.cargarRegistro();
+        conexionBD.obtenerTotalRegistros();
+        conexionBD.obtenerRegistros(2,4);
+        conexionBD.cargarRegistro("MetalGear", 1, "1900-03-12", 300);
         conexionBD.cerrar();
 
 
